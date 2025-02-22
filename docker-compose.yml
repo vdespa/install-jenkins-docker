@@ -1,5 +1,3 @@
-version: '3.7'
-
 services:
   jenkins-docker:
     image: docker:dind
@@ -20,6 +18,8 @@ services:
 
   my-jenkins:
     image: my-jenkins
+    build:
+      context: .
     container_name: my-jenkins
     restart: on-failure
     environment:
